@@ -510,6 +510,8 @@ export class Project {
     async save() {
         await this._context.fileSystemWrapper.flush();
         await Promise.all(this._getUnsavedSourceFiles().map(f => f.save()));
+
+        return this
     }
 
     /**
@@ -524,6 +526,8 @@ export class Project {
         // is a way, but people just shouldn't be using this method unless they're really lazy.
         for (const file of this._getUnsavedSourceFiles())
             file.saveSync();
+
+        return this
     }
 
     /**
@@ -663,14 +667,19 @@ export class Project {
      * 
      * WARNING! This will forget all the nodes in the file! It's best to do this after you're all done with the file.
      */
-
     clean() {
         for (let val; val != (val = this.getSourceFiles().map(node => node.print()).toString());) {
             this.getSourceFiles().forEach(file => file.clean())
         }
         return this
     }
-
+    
+    /**
+     * Cleans all project files, saves the files and emits them.
+     */
+    finish() {
+        return this.clean().saveSync().emitSync()
+    }
 }
 
 function normalizeAmbientModuleName(moduleName: string) {
