@@ -45,6 +45,13 @@
     multimatch "^4.0.0"
     typescript "~3.7.2"
 
+"@ts-morph/scripts@~0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ts-morph/scripts/-/scripts-0.2.0.tgz#09221d13e3d0d38fac389019d3e74ad14c1475bc"
+  integrity sha512-7IrVWrJ7htHwg07/pD0IAKaGGeVLH0udHWiAms5ao68kZ0SBWzuGpgBYD5qFVsiOzX4bbCailH7K0ZObvFowAQ==
+  dependencies:
+    ts-morph "npm:ts-morph@5.0.0"
+
 "@ts-nameof/common@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@ts-nameof/common/-/common-4.2.0.tgz#a48d280e92ae1788c2067a5c4b5b1af846b42f52"
@@ -648,8 +655,9 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 log-symbols@3.0.0:
   version "3.0.0"
